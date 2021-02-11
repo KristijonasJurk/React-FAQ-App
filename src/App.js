@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import data from './data';
 import SingleQuestion from './Question';
 function App() {
-
-  const [question, setQuestion] = useState(data)
-
-
+  const [questions, setQuestion] = useState(data)
   return (
     <main>
       <div className="container">
         <h3>questions and answers about login</h3>
         <section className="info">
-          <SingleQuestion key={question.id} {...data} />
+          {questions.map((question) => {
+            return <SingleQuestion key={question.id} {...question} />
+          })}
         </section>
       </div>
     </main>
