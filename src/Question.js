@@ -3,33 +3,21 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 const Question = ({ title, info }) => {
   const [show, setShow] = useState(false)
   const showInfo = () => {
-
+    setShow(!show)
   }
-  if (show === false) {
-    return (
-      <article className='question'>
-        <header>
-          <h4>{title}</h4>
-          <button className="btn">
-            <AiOutlinePlus onClick={() => showInfo()} />
-          </button>
-        </header>
-        <p>{info}</p>
-      </article>
-    )
-  }
-  if (show === true) {
-    return (
-      <article className='question'>
-        <header>
-          <h4>{title}</h4>
-          <button className="btn">
-            <AiOutlineMinus onClick={() => showInfo()} />
-          </button>
-        </header>
-      </article>
-    )
-  }
+  return (
+    <article className='question'>
+      <header>
+        <h4>{title}</h4>
+        <button className="btn" onClick={() => showInfo()}>
+          {show ? <AiOutlinePlus /> : <AiOutlineMinus />}
+        </button>
+      </header>
+      {show ?
+        <p>{info}</p> :
+        ''}
+    </article>
+  )
 };
 
 export default Question;
