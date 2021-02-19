@@ -1,20 +1,8 @@
-#### Idea
+### Greetings! :wave:
 
-[uidesigndaily](https://uidesigndaily.com/posts/sketch-accordion-website-day-1175)
+## React FAQ Accordion
+A task to practise UseState hooks :thought_balloon: :interrobang: 
 
-![](./idea.png);
+## Project Page
 
-#### React Icons
-
-[react icons](https://react-icons.github.io/react-icons/)
-
-```
-npm install react-icons --save
-```
-
-```javascript
-import { FaHome } from 'react-icons/fa';
-const Component = () => {
-  return <FaHome className='icon'></FaHome>;
-};
-```
+Feel free to check out the page at - https://react-faq-app.herokuapp.com/
